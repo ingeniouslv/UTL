@@ -1,0 +1,373 @@
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+@import "compass/css3/filter";
+
+/* google fonts */
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,600,500,400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+/*custom styles*/
+body {
+	padding-top: 51px;
+}
+.navbar-inverse {
+	background: #000;
+	@include transition(top 0.25s ease-out);
+	
+	&.navbar-hide {
+		top: -45px;
+	}
+	
+	.navbar-nav {
+		font-family: "Raleway", sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+		float: right;
+		@media (max-width: 676px) {
+			float: none;
+		}
+	}
+}
+.background {
+	background-image: url(../img/utl_bg.jpg);
+	opacity: 0.95;
+}
+
+.story {
+	padding: 80px 0;
+	.story-header {
+		color: #fff;
+		font-family: 'Raleway', sans-serif;
+		text-transform: uppercase;
+		font-size: 8rem;
+		font-weight: 400;
+		margin-top: -2rem;
+		margin-bottom: 3.4rem;
+	}
+}
+.bg-black {
+	background: #222;
+}
+
+.header-9-sub {
+	padding-bottom: 300px;
+}
+
+/* Logo Animation **/
+.utl-logo {
+  height: auto;
+  width: 95%;
+}
+
+.utl-logo .text {
+  stroke-width: 1;
+  stroke: rgb(255,255,255);
+  stroke-dasharray: 1865.753px 1865.753px;
+  stroke-dashoffset:  1865.753px;
+  fill-opacity: 0;
+  fill: rgb(255,255,255);
+  
+  -webkit-animation-name: stroke, fill;  
+  -webkit-animation-duration: 6s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  
+  animation-name: stroke, fill;  
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes stroke {
+  0% { stroke-dashoffset:  1865.753px; }
+  50% { stroke-dashoffset: 0 } 
+  100% { stroke-dashoffset: 0 }
+}
+
+@-webkit-keyframes fill {
+  0% { fill-opacity: 0; }
+  50% { fill-opacity: 1; }
+  100% { fill-opacity: 1; } 
+}
+
+@keyframes stroke {
+  0% { stroke-dashoffset:  1865.753px; }
+  50% { stroke-dashoffset: 0 } 
+  100% { stroke-dashoffset: 0 }
+}
+
+@keyframes fill {
+  0% { fill-opacity: 0; }
+  50% { fill-opacity: 1; }
+  100% { fill-opacity: 1; } 
+}
+
+
+/* the container */
+.under-the-lights-splash {
+	color: #fff;
+	text-align: center;
+	display: table;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform:translateX(-50%) translateY(-50%);
+	-moz-transform:translateX(-50%) translateY(-50%);
+	-ms-transform:translateX(-50%) translateY(-50%);
+	-o-transform:translateX(-50%) translateY(-50%);
+	transform:translateX(-50%) translateY(-50%);
+	.june20 {
+		font-family:'Roboto', sans-serif;
+		opacity: 0;
+		-webkit-transition: all 2s;
+		-moz-transition: all 2s;
+		-ms-transition: all 2s;
+		-o-transition: all 2s;
+		transition: all 2s;
+		line-height: 2rem;
+		&.load {
+			opacity: 1;
+		}
+		.date {
+			font-size: 11px;
+			margin-bottom: 0;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-top: 10px;
+		}
+		h2 {
+			color: #fff;
+			font-size: 2rem;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing:2px;
+			margin: 0;
+		}
+		p {
+			font-size: 12px;
+		}
+	}
+	.buy-tickets {
+		font-family: 'Roboto', sans-serif;
+		font-size: 17px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 700;
+		color: #fff;
+		padding: 10px 25px;
+		display: inline-block;
+		margin: auto;
+		border: 5px solid #fff;
+		-webkit-transition: all 0.4s;
+		-moz-transition: all 0.4s;
+		-ms-transition: all 0.4s;
+		-o-transition: all 0.4s;
+		transition: all 0.4s;
+		&:hover {
+			text-decoration: none;
+			background: #222;
+			border-color: #222;
+			color: #fff;
+		}
+	}
+}
+
+
+#event-overview {
+	.copy {
+		h3 {
+			margin: 2rem auto;
+		}
+		p {
+			line-height: 1.7;
+			font-size: 1.5rem;
+			color: #444;
+			font-family: "Open Sans", sans-serif;
+			text-align: justify;
+		}
+	}
+}
+
+/* acts */
+.ult-live-act {
+	padding-bottom: 4rem;
+	.artist-info {
+		color: #fff;
+		font-family: "Open Sans", sans-serif;
+		font-weight: 400;
+		
+		h3 {
+			font-family: 'Raleway', sans-serif;
+			text-transform: uppercase;	
+		}
+		p {
+			font-size: 1.3rem;
+			line-height: 1.5;
+			font-weight: 400;
+		}
+	}
+	.ult-act {
+		.act-details {
+			padding: 25px 20px 0px;
+			background: #fefefe;
+			position: relative;
+			width: 100%;
+			
+			@include translateY(0);
+			@include transition(all 0.25s ease);
+			
+			h4 {
+				font-family: 'Open Sans', sans-serif;
+				font-size: 2.7rem;
+				text-transform: uppercase;
+			}
+			
+			.more-info {
+				opacity: 0;
+				span {
+					display: block;
+					.artist-button {
+						font-family: 'Roboto', sans-serif;
+						font-size: 17px;
+						text-transform: uppercase;
+						letter-spacing: 2px;
+						font-weight: 700;
+						color: #fff;
+						padding: 10px 25px;
+						display: inline-block;
+						margin: auto;
+						margin-bottom: 3rem;
+						border: 5px solid #fff;
+						-webkit-transition: all 0.4s;
+						-moz-transition: all 0.4s;
+						-ms-transition: all 0.4s;
+						-o-transition: all 0.4s;
+						transition: all 0.4s;
+						&:hover {
+							text-decoration: none;
+							background: #222;
+							border-color: #222;
+							color: #fff;
+						}						
+					}
+				}
+			}
+			
+			&:before {
+				content: "";
+				border-left: 15px solid transparent;
+				border-right: 15px solid transparent;
+				border-bottom: 15px solid #fefefe;
+				position: absolute;
+				top: -8px;
+				left: 50%;
+				margin-left: -15px;
+				@include transition(all 0.25s ease);
+			}
+		}
+		
+		&:hover, .active {
+			img {
+				@include filter(grayscale(40%));
+				@include transition(all 0.35s ease);
+			}
+			.act-details {
+				@include translateY(-2%);
+				@include transition(all 0.25s ease);
+				
+				.more-info {
+					opacity: 1;
+				}
+				
+				background: #2c2c2c;	
+				color: #fff;
+				h4 {
+					color: #fff;
+				}		
+				&:before {
+					border-bottom: 15px solid #2c2c2c;	
+				}
+				.info-wrap {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+#event-acts {
+	overflow: hidden;
+	
+	h3 {
+		color: #fff;
+	}
+	
+	&:after {
+		background: url('../img/bg_northernlights.gif');
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 1088px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		opacity: 0.3;
+		z-index: 0;
+	}
+
+}
+
+#event-djs {
+	h1 {
+		color: #000;
+	}
+	.artist-button {
+		font-size: 12px;
+	}
+	
+	.ult-act {
+		&.active {
+			img {
+				@include filter(grayscale(40%));
+				@include transition(all 0.35s ease);
+			}
+			.act-details {
+				@include translateY(-2%);
+				@include transition(all 0.25s ease);
+				
+				.more-info {
+					opacity: 1;
+					a {
+						color: #fff;
+						margin: auto 5px;
+						.fa {
+							font-size: 15px;
+						}
+						&:hover {
+							color: #ED2F31;
+						}
+					}
+				}
+				
+				background: #2c2c2c !important;	
+				color: #fff;
+				h4 {
+					color: #fff;
+				}		
+				&:before {
+					border-bottom: 15px solid #2c2c2c;	
+				}
+				.info-wrap {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+#partners {
+	background: #000;
+}
