@@ -29,8 +29,9 @@ body {
 	}
 }
 .background {
-	background-image: url(../img/utl_bg.jpg);
 	opacity: 0.95;
+	background: url('../img/utl_july20_banner.jpg') 50% 50% no-repeat fixed;
+	background-size: cover;
 }
 
 .story {
@@ -56,16 +57,16 @@ body {
 /* Logo Animation **/
 .utl-logo {
   height: auto;
-  width: 95%;
+  width: 65%;
 }
 
 .utl-logo .text {
   stroke-width: 1;
-  stroke: rgb(255,255,255);
+  stroke: rgb(253,233,0);
   stroke-dasharray: 1865.753px 1865.753px;
   stroke-dashoffset:  1865.753px;
   fill-opacity: 0;
-  fill: rgb(255,255,255);
+  fill: rgb(253,233,0);
   
   -webkit-animation-name: stroke, fill;  
   -webkit-animation-duration: 6s;
@@ -107,7 +108,7 @@ body {
 
 /* the container */
 .under-the-lights-splash {
-	color: #fff;
+	color: rgb(253,233,0);
 	text-align: center;
 	display: table;
 	width: 100%;
@@ -131,6 +132,11 @@ body {
 		&.load {
 			opacity: 1;
 		}
+		.ferreira {
+			margin: auto;
+			width: 320px;
+			margin-bottom: 15px;
+		}
 		.date {
 			font-size: 11px;
 			margin-bottom: 0;
@@ -139,7 +145,7 @@ body {
 			margin-top: 10px;
 		}
 		h2 {
-			color: #fff;
+			color: rgb(253,233,0);
 			font-size: 2rem;
 			text-transform: uppercase;
 			font-weight: 700;
@@ -151,16 +157,17 @@ body {
 		}
 	}
 	.buy-tickets {
+		background: #222;
+		border: 5px solid #fff;
+		color: #fff;
 		font-family: 'Roboto', sans-serif;
 		font-size: 17px;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		font-weight: 700;
-		color: #fff;
 		padding: 10px 25px;
 		display: inline-block;
 		margin: auto;
-		border: 5px solid #fff;
 		-webkit-transition: all 0.4s;
 		-moz-transition: all 0.4s;
 		-ms-transition: all 0.4s;
@@ -168,9 +175,10 @@ body {
 		transition: all 0.4s;
 		&:hover {
 			text-decoration: none;
-			background: #222;
+			background: rgb(253,233,0);
 			border-color: #222;
-			color: #fff;
+			border: 5px solid rgb(253,233,0);
+			color: rgb(0,0,0);
 		}
 	}
 }
